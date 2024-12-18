@@ -6,8 +6,8 @@ public static class Factory
     {
         var helpers = new List<Helper>
         {
-            new Elf("Alv1", "Detter Alv nummer 1"),
-            new Elf("Per","Detter Alv nummer 2")
+            new Elf("Alv1", "Dett er Alv nummer 1"),
+            new Elf("Per","Dett er Alv nummer 2")
         };
 
 
