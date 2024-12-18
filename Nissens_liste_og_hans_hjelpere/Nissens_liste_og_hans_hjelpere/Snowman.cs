@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Nissens_liste_og_hans_hjelpere
 {
-    internal class Snowman
+    internal class Snowman: Helper
     {
+        public Snowman(string name) : base(name)
+        {
+            
+        }
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Nissens_liste_og_hans_hjelpere
 {
-    internal class Raindeer
+    public class Reindeer: Helper
     {
+        
+        public Reindeer(string name) : base(name)
+        {
+            
+        }
     }
 }

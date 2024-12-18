@@ -2,4 +2,5 @@
 
 using Nissens_liste_og_hans_hjelpere;
 
+Factory.Run();
 UI.Menu();
