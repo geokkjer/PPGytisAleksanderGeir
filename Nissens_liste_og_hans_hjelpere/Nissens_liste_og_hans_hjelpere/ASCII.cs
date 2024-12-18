@@ -14,4 +14,13 @@ internal static class ASCII
   Use [UP] / [DOWN] / [ENTER] for navigation.
              Press [Q] to exit.
 ";
+
+    internal static string HelperArt = @"
+     __
+   _|==|_  
+    ('')___/
+>--(`^^')
+  (`^'^'`)
+  `======'  ldb
+";
 }
