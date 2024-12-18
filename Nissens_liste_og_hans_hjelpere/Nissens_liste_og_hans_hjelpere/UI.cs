@@ -61,7 +61,7 @@ namespace Nissens_liste_og_hans_hjelpere
                 switch (input)
                 {
                     case ConsoleKey.DownArrow:
-                        if (selectedMenuOption != options.Length) { selectedMenuOption++; }
+                        if (selectedMenuOption != options.Length - 1) { selectedMenuOption++; }
                         break;
                     case ConsoleKey.UpArrow:
                         if (selectedMenuOption != 0) { selectedMenuOption--; }
