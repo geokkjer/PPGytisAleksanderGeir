@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Nissens_liste_og_hans_hjelpere;
 
-namespace Nissens_liste_og_hans_hjelpere
+public class Elf : Helper
 {
-    class Elf : Helper
-    {
-      public string Description { get; set; }
+    public List<string> Abilities { get; private set; }
 
-      public Elf(string name, string description) : base(name)
-      {
-          Description = description;
-      }
+    public Elf(string name, string description, List<string> abilities) : base(name, description)
+    {
+        Abilities = abilities;
     }
 }

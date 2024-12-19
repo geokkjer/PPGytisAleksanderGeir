@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nissens_liste_og_hans_hjelpere
+﻿namespace Nissens_liste_og_hans_hjelpere
 {
     internal static class UI
     {
-        private static List<string> CenterOptionText(int width, string[] options)
+        private static List<string> CenterOptionText(int width, List<string> options)
         {
             List<string> CenteredMenuOptions = new List<string>();
 
@@ -38,7 +32,7 @@ namespace Nissens_liste_og_hans_hjelpere
         }
 
 
-        private static int MenuMaker(string[] options)
+        private static int MenuMaker(List<string> options)
         {
             List<string> new_options = CenterOptionText(46, options);
 
@@ -61,7 +55,7 @@ namespace Nissens_liste_og_hans_hjelpere
                 switch (input)
                 {
                     case ConsoleKey.DownArrow:
-                        if (selectedMenuOption != options.Length - 1) { selectedMenuOption++; }
+                        if (selectedMenuOption != options.Count - 1) { selectedMenuOption++; }
                         break;
                     case ConsoleKey.UpArrow:
                         if (selectedMenuOption != 0) { selectedMenuOption--; }
@@ -76,9 +70,15 @@ namespace Nissens_liste_og_hans_hjelpere
         }
 
 
+        public static void ShowElfMenu()
+        {
+            //
+        }
+
+
         public static void Menu(Factory factory)
         {
-            string[] menu = new string[]
+            List<string> menu = new List<string>
             {
                 "Show helpers and children",
                 "Add helper or child"
@@ -95,6 +95,6 @@ namespace Nissens_liste_og_hans_hjelpere
                     break;
             }
         }
-        
+
     }
 }
