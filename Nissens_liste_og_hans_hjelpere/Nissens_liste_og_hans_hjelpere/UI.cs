@@ -76,7 +76,7 @@ namespace Nissens_liste_og_hans_hjelpere
         }
 
 
-        public static void Menu()
+        public static void Menu(Factory factory)
         {
             string[] menu = new string[]
             {
@@ -87,6 +87,7 @@ namespace Nissens_liste_og_hans_hjelpere
             switch (MenuMaker(menu))
             {
                 case 0:
+                    factory.ShowHelpers();
                     break;
                 case 1:
                     break;
@@ -94,5 +95,6 @@ namespace Nissens_liste_og_hans_hjelpere
                     break;
             }
         }
+        
     }
 }

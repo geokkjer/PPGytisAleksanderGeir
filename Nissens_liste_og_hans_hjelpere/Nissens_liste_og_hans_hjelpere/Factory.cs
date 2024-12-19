@@ -1,15 +1,23 @@
 namespace Nissens_liste_og_hans_hjelpere;
 
-public static class Factory
+public class Factory
 {
-    public static void Run()
+    public List<Helper> Helpers { get; set; }
+
+    public Factory()
     {
-        var helpers = new List<Helper>
+        Helpers = new List<Helper>
         {
             new Elf("Alv1", "Dett er Alv nummer 1"),
-            new Elf("Per","Dett er Alv nummer 2")
+            new Elf("Per", "Dett er Alv nummer 2"),
         };
+    }
 
-
+    public void ShowHelpers()
+    {
+        foreach (var helper in Helpers)
+        {
+            helper.ShowInfo();
+        }
     }
 }
