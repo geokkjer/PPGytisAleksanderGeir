@@ -15,12 +15,29 @@ internal static class ASCII
              Press [Q] to exit.
 ";
 
-    internal static string HelperArt = @"
+    internal static string SnowmanArt = @"
      __
    _|==|_  
     ('')___/
 >--(`^^')
   (`^'^'`)
   `======'  ldb
+";
+internal static string ChildArt = @"
+         >\\\|/
+        <|_'''_|>
+         (O) (o) 
+  ----OOO--(_)--OOOo-----";
+
+internal static string ReindeerArt = @"
+         { }
+         {^^,
+         (   `-;
+    _     `;;~~
+   /(______);
+  (         (
+   |:------( )
+ _//         \\
+/ /          vv
 ";
 }
