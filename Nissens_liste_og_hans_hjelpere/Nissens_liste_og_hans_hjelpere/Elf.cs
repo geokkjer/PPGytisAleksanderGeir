@@ -4,7 +4,7 @@ public class Elf : Helper
 {
     public List<string> Abilities { get; private set; }
 
-    public Elf(string name, string description, List<string> abilities) : base(name, description)
+    public Elf(string name, string description, string type, List<string> abilities) : base(name, description, type)
     {
         Abilities = abilities;
     }

@@ -4,16 +4,18 @@
     {
         public string name { get; set; }
         public string description { get; private set; }
+        public string type { get; private set; }
 
-        public Helper(string name, string description)
+        public Helper(string name, string description, string type)
         {
             this.name = name;
             this.description = description;
+            this.type = type;
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Name: {name}, {description}");
+            Console.WriteLine($"Type: {type}, Name: {name}, {description}");
         }
 
         public void DoMagic()

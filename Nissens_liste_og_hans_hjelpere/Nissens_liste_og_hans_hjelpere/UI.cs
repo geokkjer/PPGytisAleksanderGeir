@@ -70,13 +70,124 @@
         }
 
 
-        public static void ShowElfMenu()
+        public static void ShowGoodChildren(Factory objectAssets)
         {
-            //
+            List<string> goodKids = new List<string>();
+
+            foreach (var child in objectAssets.Children)
+            {
+                if (child.IsGood)
+                {
+                    goodKids.Add(child.Name);
+                }
+            }
+
+            foreach (var child in goodKids)
+            {
+                Console.WriteLine(child);
+            }
+
+            var input = Console.ReadKey(false).Key;
         }
 
 
-        public static void Menu(Factory factory)
+        public static void ShowBadChildre(Factory objectAssets)
+        {
+            List<string> badKids = new List<string>();
+
+            foreach (var child in objectAssets.Children)
+            {
+                if (!child.IsGood)
+                {
+                    badKids.Add(child.Name);
+                }
+            }
+
+            foreach (var child in badKids)
+            {
+                Console.WriteLine(child);
+            }
+
+            var input = Console.ReadKey(false).Key;
+        }
+
+
+        public static void ShowChildren(Factory objectAssets)
+        {
+            List<string> behaviour = new List<string>
+            {
+                "Show good children",
+                "Show bad children"
+            };
+
+            while (true)
+            {
+                Console.WriteLine(ASCII.ChildArt);
+                Console.Clear();
+                Console.WriteLine("You may move the children in each list.");
+
+                switch (MenuMaker(behaviour))
+                {
+                    case 0:
+                        ShowGoodChildren(objectAssets);
+                        break;
+                    case 1:
+                        ShowBadChildre(objectAssets);
+                        break;
+                    case 404:
+                        return;
+                }
+            }
+        }
+
+
+        public static void ShowChildrenOrHelpers(Factory objectAssets)
+        {
+            List<string> behaviour = new List<string>
+            {
+                "Show helpers",
+                "Show children"
+            };
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine(ASCII.HelperArt);
+
+                switch (MenuMaker(behaviour))
+                {
+                    case 0:
+                        ShowHelpers(objectAssets);
+                        break;
+                    case 1:
+                        ShowChildren(objectAssets);
+                        break;
+                    case 404:
+                        return;
+                }
+            }
+        }
+
+
+        public static void ShowHelpers(Factory objectAssets)
+        {
+            Console.Clear();
+            Console.Write(ASCII.HelperArt);
+            Console.Write(
+                    "----------------------------------------------\n" +
+                    "             All of Santas helpers\n" +
+                    "----------------------------------------------\n");
+
+            foreach (var helper in objectAssets.Helpers)
+            {
+                Console.WriteLine($"Type: {helper.type}, Name: {helper.name}, About: {helper.description}");
+            }
+
+            var input = Console.ReadKey(false).Key;
+        }
+
+
+        public static void Menu(Factory objectAssets)
         {
             List<string> menu = new List<string>
             {
@@ -84,15 +195,20 @@
                 "Add helper or child"
             };
 
-            switch (MenuMaker(menu))
+            while (true)
             {
-                case 0:
-                    factory.ShowHelpers();
-                    break;
-                case 1:
-                    break;
-                case 404:
-                    break;
+                switch (MenuMaker(menu))
+                {
+                    case 0:
+                        ShowChildrenOrHelpers(objectAssets);
+                        break;
+                    case 1:
+                        break;
+                    case 404:
+                        Console.Clear();
+                        Console.CursorVisible = true;
+                        return;
+                }
             }
         }
 

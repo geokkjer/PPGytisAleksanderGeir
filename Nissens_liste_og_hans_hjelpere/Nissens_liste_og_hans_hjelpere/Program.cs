@@ -2,6 +2,6 @@
 
 using Nissens_liste_og_hans_hjelpere;
 
-var helpers = new Factory();
+var objectAssets = new Factory();
 
-UI.Menu(helpers);
+UI.Menu(objectAssets);

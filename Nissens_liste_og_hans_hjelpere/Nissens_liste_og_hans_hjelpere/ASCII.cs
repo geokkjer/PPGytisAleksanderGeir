@@ -21,15 +21,17 @@ internal static class ASCII
     ('')___/
 >--(`^^')
   (`^'^'`)
-  `======'  ldb
+  `======'  
 ";
-internal static string ChildArt = @"
+
+    internal static string ChildArt = @"
          >\\\|/
         <|_'''_|>
          (O) (o) 
-  ----OOO--(_)--OOOo-----";
+  ----OOO--(_)--OOOo-----
+";
 
-internal static string ReindeerArt = @"
+    internal static string ReindeerArt = @"
          { }
          {^^,
          (   `-;
@@ -39,5 +41,17 @@ internal static string ReindeerArt = @"
    |:------( )
  _//         \\
 / /          vv
+";
+
+    internal static string HelperArt = @"
+                 { }      
+                 {^^,     
+                 (   `-;        __       
+            _     `;;~~       _|==|_     
+           /(______);          ('')___/  
+          (         (      >--(`^^')     
+           |:------( )       (`^'^'`)    
+         _//         \\      `======'    
+        / /          vv                  
 ";
 }

@@ -2,7 +2,7 @@
 
 internal class Snowman : Helper
 {
-    public Snowman(string name, string description) : base(name, description)
+    public Snowman(string name, string description, string type) : base(name, description, type)
     {
         //
     }
